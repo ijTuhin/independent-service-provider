@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
 
             <div class="text-white text-center pb-4">
-                <p> Route to <span>Go Wander</span> || 2022 © all rights
+                <p> Catering <span>Service</span> || 2022 © all rights
                 reserved! </p>
             </div>
         </div>

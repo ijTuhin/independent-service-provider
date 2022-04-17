@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SignUp.css';
 const SignUp = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [] = useState('');
     return (
         <div className='d-flex justify-content-center my-5'>
             <div className="form-container">
@@ -11,6 +15,10 @@ const SignUp = () => {
                     </div>
                     <div className='input-field'>
                         <input type="email" name="email" placeholder='Enter email' id="" />
+                    </div>
+                    <div >
+                        <input type="password" name="password" placeholder="Enter password" />
+                        <input type="password" name="confirm-password" placeholder="Confirm password" />
                     </div>
                     <div >
                         <input type="tel" name="phone-number" placeholder='Phone Number' id="" />
