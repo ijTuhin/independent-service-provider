@@ -20,7 +20,10 @@ const SignUp = () => {
     const handleUserPasswordBlur = event => {
         setPassword(event.target.value);
     }
-
+    const handleUserRegisterdStateChange = event => {
+        setRegistered(event.target.value);
+    }
+    
 
 
 
@@ -28,7 +31,7 @@ const SignUp = () => {
         <div className='d-flex justify-content-center my-5'>
             <div className="form-container">
                 <h3>Please <span>Sign-up</span></h3>
-                <form >
+                <form>
                     <div className='input-field'>
                         <input onBlur={handleUserNameBlur} type="text" name="name" placeholder='Enter name' />
                     </div>
@@ -44,7 +47,7 @@ const SignUp = () => {
                         <input type="text" name="address" placeholder='Enter address' />
                     </div>
                     <div className='submit-field'>
-                        <input  type="checkbox" name="" /> <span id='form-q'>Already a user?</span><br />
+                        <input onChange={handleUserRegisterdStateChange} type="checkbox" name="" /> <span id='form-q'>Already a user?</span><br />
                         <button className='border-0 px-2 py-1 rounded' type="submit">Sign Up</button>
                     </div>
                 </form>
