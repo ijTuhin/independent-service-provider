@@ -23,7 +23,10 @@ const SignUp = () => {
     const handleUserRegisterdStateChange = event => {
         setRegistered(event.target.value);
     }
-    
+    const handleFormSubmit = event => {
+        console.log('Submit')
+        event.preventDefault();
+    }
 
 
 
@@ -31,7 +34,7 @@ const SignUp = () => {
         <div className='d-flex justify-content-center my-5'>
             <div className="form-container">
                 <h3>Please <span>Sign-up</span></h3>
-                <form>
+                <form onSubmit={handleFormSubmit}>
                     <div className='input-field'>
                         <input onBlur={handleUserNameBlur} type="text" name="name" placeholder='Enter name' />
                     </div>
