@@ -7,6 +7,7 @@ const Header = () => {
             <nav className='d-flex justify-content-center py-3 header'>
                 <CustomLink className="mx-2 bar" to='/'>Home</CustomLink>
                 <CustomLink className="mx-2 bar" to='/login'>Login</CustomLink>
+                <CustomLink className="mx-2 bar" to='/signup'>Sign Up</CustomLink>
             </nav>
         </div>
     );
