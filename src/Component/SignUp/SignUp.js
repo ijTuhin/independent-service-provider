@@ -24,8 +24,15 @@ const SignUp = () => {
         setRegistered(event.target.value);
     }
     const handleFormSubmit = event => {
-        console.log('Submit')
         event.preventDefault();
+
+
+        if(!registered){
+            console.log('new user',name, email,password);
+        }
+        else{
+            console.log('Already user',name, email,password);
+        }
     }
 
 
