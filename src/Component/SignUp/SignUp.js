@@ -9,7 +9,7 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [registered, setRegistered] = useState(false);
-    const [validation, setvalidation] = useState(false);
+    const [validated, setValidated] = useState(false);
 
 
 
@@ -23,7 +23,7 @@ const SignUp = () => {
         setPassword(event.target.value);
     }
     const handleUserRegisterdStateChange = event => {
-        setRegistered(event.target.value);
+        setRegistered(event.target.checked);
     }
     const handleFormSubmit = event => {
         event.preventDefault();
@@ -53,8 +53,8 @@ const SignUp = () => {
     return (
         <div className='d-flex justify-content-center my-5'>
             <div className="form-container">
-                <h3>Please <span>Sign-up</span></h3>
-                <form onSubmit={handleFormSubmit}>
+                <h3>Please <span>{registered ? 'Login' : 'Sign-up'}</span></h3>
+                <form noValidate validated={validated} onSubmit={handleFormSubmit}>
                     <div className='input-field'>
                         <input onBlur={handleUserNameBlur} type="text" name="name" placeholder='Enter name' />
                     </div>
@@ -71,7 +71,7 @@ const SignUp = () => {
                     </div>
                     <div className='submit-field'>
                         <input onChange={handleUserRegisterdStateChange} type="checkbox" name="" /> <span id='form-q'>Already a user?</span><br />
-                        <button className='border-0 px-2 py-1 rounded' type="submit">Sign Up</button>
+                        <button className='border-0 px-2 py-1 rounded' type="submit">{registered ? 'Login' : 'Sign Up'}</button>
                     </div>
                 </form>
             </div>
