@@ -1,0 +1,47 @@
+.footer{
+    margin-top: 197px;
+    background-image: url('../../images/footer-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.footer .box-container {
+    padding: 50px 180px 5px 220px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+.footer .box-container .box h3:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+}
+
+.footer .box-container .box a {
+    text-decoration: none;
+    color: #fff9;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    display: block;
+}
+
+.footer .box-container .box a i {
+    color: #8e44ad;
+    padding-right: .5rem;
+    transition: .2s linear;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 1.5rem;
+}
+
+.footer p{
+    margin-top: 15px;
+    font-size: smaller;
+}
