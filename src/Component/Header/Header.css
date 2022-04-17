@@ -1,0 +1,11 @@
+.header .bar {
+    text-decoration: none;
+    color: rgb(173, 173, 173);
+    font-weight: 500;
+}
+
+.header .bar:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+}
