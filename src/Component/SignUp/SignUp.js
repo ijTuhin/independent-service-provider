@@ -1,4 +1,6 @@
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
+import auth from '../../firebase.init';
 import './SignUp.css';
 
 const SignUp = () => {
@@ -27,11 +29,22 @@ const SignUp = () => {
         event.preventDefault();
 
 
-        if(!registered){
-            console.log('new user',name, email,password);
+        if (!registered) {
+            console.log('new user', name, email, password);
+            createUserWithEmailAndPassword(auth, email, password)
+                .then(result => {
+                    const user = result.user;
+                    console.log(user);
+                    alert('Registration Successful');
+                })
+                .catch(error => {
+                    console.error(error);
+                    // set error message
+                    setError(error.message);
+                })
         }
-        else{
-            console.log('Already user',name, email,password);
+        else {
+            console.log('Already user', name, email, password);
         }
     }
 
