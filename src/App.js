@@ -7,11 +7,11 @@ import Login from './Component/Login/Login';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <Header></Header>
       <Routes>
-        <Route path='/'>{<Home></Home>}</Route>
-        <Route path='/login'>{<Login></Login>}</Route>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
