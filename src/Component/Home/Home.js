@@ -25,7 +25,7 @@ const Home = () => {
                         <div class="carousel-caption d-none d-md-block">
                             <h1 className='text-secondary fw-bold fst-italic fs-2'>Foodie Food</h1>
                             <small className='text-secondary fw-bold fst-italic fs-5'>Catering Service</small>
-                            <p>Serve your tummy with our yummy food. <br /> Order for your parties, special days, or regular need.</p>
+                            <p>Serve your tummy with our yummy food. <br /> Order for your parties, special days, or regular need. We offer micro event-specific set menus that's also fully customizable down to the level of spices and the length of the toothpick. Just contact us for a free consultation.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -49,6 +49,7 @@ const Home = () => {
 
             <div>
                 <h2 className='text-center pt-5 mt-5'>Our Services</h2>
+                <p className='text-center pt-1 mt-1'>Catering all over the world is seen as a very sophisticated and respectable profession. <br /> This is because great caterers have the ability to put on extremely elegant <br /> and creative food experiences at any location chosen by a client. However, in Bangladesh, the reverse is true.</p>
                 <div className="card-group service-container">
                     {
                         services.map(service => <Services
@@ -57,6 +58,11 @@ const Home = () => {
                         ></Services>)
                     }
                 </div>
+            </div>
+            <div className='my-5 pt-5'>
+                <h1 className='text-center pt-5 mt-5 fw-normal text-black-50'>A L W A Y S  <span className='mx-3 fw-bold text-warning'>O P E N</span></h1>
+                <p className='fw-normal text-black-50 fs-6 text-center'>WE ARE NEVER CLOSED. WHATEVER BE THE CONDITIONS, YOU CAN ALWAYS COUNT ON ALPHA TO DELIVER.</p>
+                <h4 className='text-center fw-normal text-black-50'>24/7 <span className='mx-1 fw-bold text-warning'>||</span> 365 Days</h4>
             </div>
         </div>
     );

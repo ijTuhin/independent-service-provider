@@ -11,3 +11,20 @@
     background-color: white;
     border: none;
 }
+.card-body{
+    background-color: rgba(208, 165, 32,0.4);
+}
+.card-footer{
+    background-color: rgba(208, 165, 32,0.4);
+    padding: 0;
+}
+.service-btn{
+    width: 100%;
+    background-color: burlywood;
+    color: aliceblue;
+}
+.service-btn:hover{
+    width: 100%;
+    background-color: rgba(222, 184, 135,0.7);
+    color: aliceblue;
+}
