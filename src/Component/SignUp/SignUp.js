@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import auth from '../../firebase.init';
 import './SignUp.css';
@@ -61,6 +61,16 @@ const SignUp = () => {
 
 
 
+
+    const handleResetPassword = () => {
+        sendPasswordResetEmail(auth, email)
+        .then(()=>{
+            alert('Email sent to reset password');
+        })
+    }
+
+
+
     return (
         <div className='d-flex justify-content-center my-5'>
             <div className="form-container">
@@ -106,11 +116,12 @@ const SignUp = () => {
                             </div>
                             {registered
                                 ?
-                                <><button className='forgot-btn'>Forgot password?</button></>
+                                <><button onClick={handleResetPassword} className='forgot-btn'>Forgot password?</button></>
                                 :
                                 <></>
                             }
                         </div>
+                        <span className='text-danger'>{error}</span><br />
                         <button className='border-0 px-2 py-1 rounded submit-btn' type="submit">{registered ? 'Login' : 'Sign Up'}</button>
                     </div>
 
