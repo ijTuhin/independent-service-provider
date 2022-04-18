@@ -1,5 +1,6 @@
 import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './SignUp.css';
 
@@ -10,6 +11,13 @@ const SignUp = () => {
     const [error, setError] = useState('');
     const [registered, setRegistered] = useState(false);
     const [validated, setValidated] = useState(false);
+
+
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location?.state?.from?.pathname || '/';
 
 
 
@@ -29,6 +37,17 @@ const SignUp = () => {
         event.preventDefault();
 
 
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.stopPropagation();
+            return;
+        }
+        setValidated(true);
+
+
+        setError('');
+
+
         if (!registered) {
             console.log('new user', name, email, password);
             createUserWithEmailAndPassword(auth, email, password)
@@ -36,6 +55,7 @@ const SignUp = () => {
                     const user = result.user;
                     console.log(user);
                     alert('Registration Successful');
+                    navigate(from, {replace: true});
                 })
                 .catch(error => {
                     console.error(error);
@@ -50,6 +70,7 @@ const SignUp = () => {
                     const user = result.user;
                     console.log(user);
                     alert('Login Successful');
+                    navigate(from, {replace: true});
                 })
                 .catch(error => {
                     console.error(error);
