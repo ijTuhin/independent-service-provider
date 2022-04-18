@@ -5,11 +5,11 @@ import Services from '../Services/Services';
 import './Home.css';
 const Home = () => {
     const [services, setServices] = useState([]);
-    useEffect(()=>{
+    useEffect(() => {
         fetch('services.json')
             .then(res => res.json())
             .then(data => setServices(data));
-    },[]);
+    }, []);
     return (
         <div className='home-container'>
 
@@ -45,13 +45,16 @@ const Home = () => {
                 </button>
             </div>
 
-            <div className="card-group">
-                {
-                    services.map(service => <Services
-                        key={service.id}
-                        service={service}
-                    ></Services>)
-                }
+            <div>
+                <h2 className='text-center pt-5 mt-5'>Our Services</h2>
+                <div className="card-group service-container">
+                    {
+                        services.map(service => <Services
+                            key={service.id}
+                            service={service}
+                        ></Services>)
+                    }
+                </div>
             </div>
         </div>
     );
