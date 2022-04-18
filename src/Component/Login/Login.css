@@ -1,0 +1,40 @@
+.input-field input{
+    width: 393.5px;
+}
+.form-container{
+    border: none;
+    background-color: rgba(230, 230, 250,0.6);
+    padding: 35px 25px;
+}
+.form-container:hover{
+    background-color: rgba(230, 230, 250,0.7);
+}
+.form-container h3 span{
+    color: rgba(142, 68, 173,1);
+}
+.form-container input{
+    margin: 2px;
+    padding: 5px;
+}
+.form-container #form-q{
+    font-size: smaller;
+}
+.submit-field input,.submit-btn{
+    margin: 2px;
+}
+.submit-field .submit-btn{
+    background-color: rgba(142, 68, 173,0.7);
+    color: rgb(228, 228, 228);
+}
+.submit-field .submit-btn:hover{
+    background-color: rgba(142, 68, 173,0.6);
+}
+.submit-field .forgot-btn{
+    border: none;
+    background-color: rgba(230, 230, 250,0.5);
+    font-size: smaller;
+    color: rgb(31, 31, 31);
+}
+.submit-field .forgot-btn:hover{
+    color: rgb(151, 33, 202);;
+}
