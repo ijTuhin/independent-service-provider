@@ -19,7 +19,7 @@
 .form-container #form-q{
     font-size: smaller;
 }
-.submit-field input,.submit-btn{
+.submit-field input,.submit-btn,.google-btn{
     margin: 2px;
 }
 .submit-field .submit-btn{
@@ -29,6 +29,14 @@
 .submit-field .submit-btn:hover{
     background-color: rgba(142, 68, 173,0.6);
 }
+.google-btn{
+    background-color: rgba(175, 171, 100, 1);
+    color: rgb(228, 228, 228);
+}
+.google-btn:hover{
+    background-color: rgba(170, 160, 73,1);
+}
+
 .submit-field .forgot-btn{
     border: none;
     background-color: rgba(230, 230, 250,0.5);

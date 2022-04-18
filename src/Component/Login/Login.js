@@ -1,3 +1,5 @@
+import { faSignIn, faSignOut } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -143,8 +145,14 @@ const Login = () => {
                             }
                         </div>
                         <span className='text-danger d-block'>{error}</span>
-                        <button className='border-0 px-2 py-1 rounded submit-btn' type="submit">{registered ? 'Sign Up' : 'Login'}</button>
+                        <div className='d-flex justify-content-between align-items-center'>
+                            <button className='border-0 px-5 py-1 rounded submit-btn' type="submit">{registered ? 'Sign Up' : 'Login'}</button>
+                            <small>Or, </small>
+                            <button type="submit" className='border-0 px-4 py-1 rounded google-btn'>Sign in With Google <FontAwesomeIcon className='ms-1' icon={faSignIn}></FontAwesomeIcon> </button>
+                        </div>
                     </div>
+                    <hr />
+
 
                 </form>
             </div>
