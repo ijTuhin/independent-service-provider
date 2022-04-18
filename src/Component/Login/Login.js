@@ -1,6 +1,6 @@
 import { faSignIn } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -11,6 +11,7 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [user, setUser]= useState({});
     const [registered, setRegistered] = useState(false);
     const [validated, setValidated] = useState(false);
 
@@ -90,6 +91,27 @@ const Login = () => {
             .then(() => {
                 alert('Email sent to reset password');
             })
+            .catch(error=>{
+                setError(error);
+            })
+    }
+
+
+
+    const googleProvider = new GoogleAuthProvider();
+    const handleSignInWithGoogle = () => {
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(result);
+                setUser(user)
+                alert('||Sign In with Google||');
+                navigate(from, { replace: true });
+            })
+            .catch(error=>{
+                alert(error);
+                setError(error);
+            });
     }
 
 
@@ -148,7 +170,7 @@ const Login = () => {
                         <div className='d-flex justify-content-between align-items-center'>
                             <button className='border-0 px-5 py-1 rounded submit-btn' type="submit">{registered ? 'Sign Up' : 'Login'}</button>
                             <small>Or, </small>
-                            <button type="submit" className='border-0 px-4 py-1 rounded google-btn'>Sign in With Google <FontAwesomeIcon className='ms-1' icon={faSignIn}></FontAwesomeIcon> </button>
+                            <button onClick={handleSignInWithGoogle} type="submit" className='border-0 px-4 py-1 rounded google-btn'>Sign in With Google <FontAwesomeIcon className='ms-1' icon={faSignIn}></FontAwesomeIcon> </button>
                         </div>
                     </div>
                     <hr />
