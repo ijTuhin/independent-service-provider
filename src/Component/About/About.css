@@ -1,0 +1,46 @@
+.about img {
+    width: 130px;
+    height: 128px;
+    border-radius: 50%;
+}
+.goal{
+    position: relative;
+}
+.hr-line {
+    width: 50%;
+    margin-bottom: 1px;
+}
+.hr-line-II {
+    width: 200px;
+    margin-top: 1px;
+    margin-left: 190px;
+}
+.goal-txt{
+    position: absolute;
+    top: -28px;
+    left: 0px;
+    right: -100px;
+}
+.goal-box{
+    position: relative;
+    border: 5px none;
+    background-color: lightgoldenrodyellow;
+    color: rgb(139, 139, 139);
+    border-radius: 0px 30px 0px 30px;
+    width: 150px;
+    height: 150px;
+}
+.goal-box p{
+    /* position: absolute; */
+    top: 75px;
+}
+.goal-box:hover{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: lightcyan;
+}
+.goal-box:hover p{
+    /* position: absolute; */
+    top: 50px;
+}

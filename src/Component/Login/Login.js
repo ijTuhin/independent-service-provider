@@ -1,6 +1,6 @@
 import { faSignIn } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { createUserWithEmailAndPassword, GoogleAuthProvider, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -11,8 +11,8 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const [user, setUser]= useState({});
-    const [registered, setRegistered] = useState(false);
+    const [user, setUser] = useState({});
+    const [notRegistered, setNotRegistered] = useState(false);
     const [validated, setValidated] = useState(false);
 
 
@@ -33,8 +33,8 @@ const Login = () => {
     const handleUserPasswordBlur = event => {
         setPassword(event.target.value);
     }
-    const handleUserRegisterdStateChange = event => {
-        setRegistered(event.target.checked);
+    const handleUserNotRegisterdStateChange = event => {
+        setNotRegistered(event.target.checked);
     }
     const handleFormSubmit = event => {
         event.preventDefault();
@@ -51,12 +51,13 @@ const Login = () => {
         setError('');
 
 
-        if (registered) {
+        if (notRegistered) {
             console.log('new user', name, email, password);
             createUserWithEmailAndPassword(auth, email, password)
                 .then(result => {
                     const user = result.user;
                     console.log(user);
+                    verifyEmail();
                     alert('Registration Successful');
                     navigate(from, { replace: true });
                 })
@@ -85,13 +86,23 @@ const Login = () => {
 
 
 
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(() => {
+                console.log('Email verification send!');
+
+            })
+    }
+
+
+
 
     const handleResetPassword = () => {
         sendPasswordResetEmail(auth, email)
             .then(() => {
                 alert('Email sent to reset password');
             })
-            .catch(error=>{
+            .catch(error => {
                 setError(error);
             })
     }
@@ -104,11 +115,11 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(result);
-                setUser(user)
+                setUser(user);
                 alert('||Sign In with Google||');
                 navigate(from, { replace: true });
             })
-            .catch(error=>{
+            .catch(error => {
                 alert(error);
                 setError(error);
             });
@@ -119,10 +130,10 @@ const Login = () => {
     return (
         <div className='d-flex justify-content-center my-5'>
             <div className="form-container">
-                <h3>Please <span>{registered ? 'Sign-up' : 'Login'}</span></h3>
+                <h3>Please <span>{notRegistered ? 'Sign-up' : 'Login'}</span></h3>
                 <form noValidate validated={validated} onSubmit={handleFormSubmit}>
                     {
-                        registered ?
+                        notRegistered ?
                             <>
                                 <div className='input-field'>
                                     <input onBlur={handleUserNameBlur} type="text" name="name" placeholder='Enter name' />
@@ -135,7 +146,7 @@ const Login = () => {
                         <input onBlur={handleUserEmailBlur} type="email" name="email" placeholder='Enter email' />
                     </div>
                     {
-                        registered ?
+                        notRegistered ?
                             <>
                                 <div>
                                     <input onBlur={handleUserPasswordBlur} type="password" name="password" placeholder="Enter password" />
@@ -157,9 +168,9 @@ const Login = () => {
 
                         <div className='d-flex justify-content-between align-items-center'>
                             <div>
-                                <input onChange={handleUserRegisterdStateChange} type="checkbox" name="" /> <span id='form-q'>Don't have an account?</span>
+                                <input onChange={handleUserNotRegisterdStateChange} type="checkbox" name="" /> <span id='form-q'>Don't have an account?</span>
                             </div>
-                            {registered
+                            {notRegistered
                                 ?
                                 <></>
                                 :
@@ -168,7 +179,7 @@ const Login = () => {
                         </div>
                         <span className='text-danger d-block'>{error}</span>
                         <div className='d-flex justify-content-between align-items-center'>
-                            <button className='border-0 px-5 py-1 rounded submit-btn' type="submit">{registered ? 'Sign Up' : 'Login'}</button>
+                            <button className='border-0 px-5 py-1 rounded submit-btn' type="submit">{notRegistered ? 'Sign Up' : 'Login'}</button>
                             <small>Or, </small>
                             <button onClick={handleSignInWithGoogle} type="submit" className='border-0 px-4 py-1 rounded google-btn'>Sign in With Google <FontAwesomeIcon className='ms-1' icon={faSignIn}></FontAwesomeIcon> </button>
                         </div>

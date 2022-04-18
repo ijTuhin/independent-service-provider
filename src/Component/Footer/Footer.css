@@ -1,7 +1,7 @@
 .footer{
     margin-top: 197px;
-    background-image: url('../../images/footer-bg.jpg');
-    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
     background-position: center;
 }
 

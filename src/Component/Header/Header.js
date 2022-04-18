@@ -18,17 +18,17 @@ const Header = () => {
     }
     return (
         <div>
-            <nav className='d-flex justify-content-center py-3 header'>
-                <CustomLink className="mx-2 bar" to='/'>Home</CustomLink>
-                <CustomLink className="mx-2 bar" to='/about'>About</CustomLink>
-                <CustomLink className="mx-2 bar" to='/blogs'>Blog</CustomLink>
+            <nav className='d-flex justify-content-center py-4 header'>
+                <CustomLink className="me-4  bar" to='/'>Home</CustomLink>
+                <CustomLink className="me-4  bar" to='/about'>About</CustomLink>
+                <CustomLink className="me-4  bar" to='/blogs'>Blog</CustomLink>
                 {
                     user?.uid
                         ?
                         <button className='logout-btn bg-light' onClick={handleSignOut}><FontAwesomeIcon icon={faSignOut}></FontAwesomeIcon>
                         </button>
                         :
-                        <CustomLink className="mx-2 bar" to="/login">Login</CustomLink>
+                        <CustomLink className="me-4  bar" to="/login">Login</CustomLink>
                 }
             </nav>
         </div>
