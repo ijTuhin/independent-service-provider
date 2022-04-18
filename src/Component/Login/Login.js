@@ -48,7 +48,7 @@ const Login = () => {
         setError('');
 
 
-        if (!registered) {
+        if (registered) {
             console.log('new user', name, email, password);
             createUserWithEmailAndPassword(auth, email, password)
                 .then(result => {
