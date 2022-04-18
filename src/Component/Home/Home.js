@@ -1,19 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import banner1 from '../../images/banner1.jpg';
 import banner2 from '../../images/banner2.jpg';
+import Services from '../Services/Services';
 import './Home.css';
 const Home = () => {
+    const [services, setServices] = useState([]);
+    useEffect(()=>{
+        fetch('services.json')
+            .then(res => res.json())
+            .then(data => setServices(data));
+    },[]);
     return (
         <div className='home-container'>
-            {/* <div className="px-5 banner-txt d-flex flex-column justify-content-center align-items-center text-center">
-                <h2 className='px-5'>Service Provider</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br /> Blanditiis rem nihil odit placeat cumque voluptates ipsam <br /> assumenda distinctio nobis fuga quibusdam odio ut sequi, <br /> reprehenderit dignissimos magni exercitationem dolore quis delectus <br /> amet vero sed dolorem porro? Eum animi illum hic ullam harum, <br /> nemo incidunt nesciunt asperiores autem quibusdam reiciendis modi.Lorem ipsum dolor <br /> sit amet consectetur adipisicing elit. Dolore unde commodi dignissimos. Error, optio? Cupiditate, <br /> fuga placeat non ducimus, quod sequi in quos cumque tempora, distinctio nulla vel et expedita?<br /> Aut odio ullam veniam fuga placeat, veritatis ab cumque quas nostrum provident <br /> nobis tenetur dicta labore quis laudantium sed quidem atque illum quibusdam consectetur. <br /> Incidunt fugiat, dignissimos harum praesentium error iusto? <br />
-                Facere mollitia, voluptatem facilis perferendis odit rem excepturi <br /> hic vel nisi ratione eveniet earum non molestiae culpa suscipit <br /> amet ut nostrum! Sequi eum quasi consequuntur cum, atque reprehenderit dolore perferendis quos, <br /> totam tempora asperiores! Odit autem quo consectetur! Eius!</p>
-            </div>
-
-            <div className="banner">
-                <h1 className='text-center service-container'></h1>
-            </div> */}
 
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -45,6 +43,15 @@ const Home = () => {
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+            </div>
+
+            <div className="card-group">
+                {
+                    services.map(service => <Services
+                        key={service.id}
+                        service={service}
+                    ></Services>)
+                }
             </div>
         </div>
     );

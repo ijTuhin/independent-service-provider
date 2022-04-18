@@ -1,0 +1,58 @@
+[
+    {
+        "id": "623e2f58ae59fdb8bb6c20e9",
+        "price": "$2,345.80",
+        "img": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80",
+        "name": "Burger",
+        "services":"ueryauwery"
+    },
+    {
+        "id": "623e2de14de50aae37c58aa1",
+        "price": "$1,870.29",
+        "img": "https://images.unsplash.com/photo-1633641471128-5f32086b98c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "name": "Sandwiches",
+        "services":"ueryauwery"
+    },
+    {
+        "id": "623e2f1b46d70c08b55c2925",
+        "price": "$3,904.05",
+        "img": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "name": "Biriyani",
+        "services":"ueryauwery"
+    },
+    {
+        "id": "623e2de1b03d1a01520f7272",
+        "price": "$3,934.57",
+        "img": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "name": "North Indian Cuisine",
+        "services":"ueryauwery"
+    },
+    {
+        "id": "623e2de1c8f08ebeb60c4829",
+        "price": "$3,746.00",
+        "img": "https://images.unsplash.com/photo-1613292443284-8d10ef9383fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "name": "Street Food",
+        "services":"ueryauwery"
+    },
+    {
+        "id": "623e2de1bdedb422ada558d3",
+        "price": "$1,807.29",
+        "img": "https://images.unsplash.com/photo-1618213837799-25d5552820d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=842&q=80",
+        "name": "Pizza",
+        "services":"ueryauwery"
+    },
+    {
+        "id": "623e2f1b197aadaf801e7ac6",
+        "price": "$3,807.57",
+        "img": "https://images.unsplash.com/photo-1542826438-bd32f43d626f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=992&q=80",
+        "name": "Dessert",
+        "services":"ueryauwery"
+    },
+    {
+        "id": "623e2de1e76584b20a0a7798",
+        "price": "$2,403.88",
+        "img": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "name": "Regular Thali",
+        "services":"ueryauwery"
+    }
+]

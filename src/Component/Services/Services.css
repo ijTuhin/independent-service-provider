@@ -1,0 +1,9 @@
+.service-card {
+    border-left-style: double;
+    border-left-width: 5px;
+    border-left-color: goldenrod;
+    /* border: 3px solid darkmagenta; */
+    border-radius: 15px 0px;
+    padding: 10px 10px;
+    margin: 10px;
+}
