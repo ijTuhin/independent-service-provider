@@ -20,3 +20,33 @@
     grid-gap: 15px;
     margin: 20px 200px;
 }
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found img {
+    width: 400px;
+    height: 400px;
+}
+
+.not-found .goBack-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(49, 201, 176);
+    color: whitesmoke;
+}
+
+.not-found .goBack-btn span {
+    margin-left: 10px;
+}
+
+.not-found .goBack-btn:hover {
+    background-color: rgba(192, 144, 24, 0.8);
+    color: whitesmoke;
+    padding: 10px 20px;
+}
