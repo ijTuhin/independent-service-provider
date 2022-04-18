@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import auth from '../../firebase.init';
 import './SignUp.css';
@@ -45,6 +45,17 @@ const SignUp = () => {
         }
         else {
             console.log('Already user', name, email, password);
+            signInWithEmailAndPassword(auth, email, password)
+                .then(result => {
+                    const user = result.user;
+                    console.log(user);
+                    alert('Login Successful');
+                })
+                .catch(error => {
+                    console.error(error);
+                    // set error message
+                    setError(error.message);
+                })
         }
     }
 
