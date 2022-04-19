@@ -12,7 +12,7 @@ import RequireAuth from './Component/RequireAuth/RequireAuth';
 
 function App() {
   return (
-    <div >
+    <div>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
