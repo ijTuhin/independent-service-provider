@@ -121,7 +121,7 @@ const Home = () => {
 
 
 
-
+            {/*******************  Extra Section  ******************/}
 
             <div className='my-5 pt-5'>
                 <h1 className='text-center pt-5 mt-5 fw-normal text-black-50'>A L W A Y S  <span className='mx-3 fw-bold text-warning'>O P E N</span></h1>
