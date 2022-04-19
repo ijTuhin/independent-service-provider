@@ -17,6 +17,12 @@
     grid-gap: 15px;
     margin: 20px 200px;
 }
+.service-container-sm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
 .not-found {
     display: flex;
     flex-direction: column;
@@ -52,4 +58,14 @@
     width: 100px;
     height: 100px;
     color: tan;
+}
+
+
+/* --------------------------------
+----------mobile responsive--------
+--------------------------------- */
+@media only screen and (max-width:576px){
+    .home-container{
+        width: 100%;
+    }
 }
