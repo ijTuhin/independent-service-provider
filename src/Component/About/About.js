@@ -11,7 +11,7 @@ const About = () => {
                 <hr />
                 <div className=''>
                     <h1 className='d-flex flex-row justify-content-end me-5 pe-2'>ISRAT JAHAN TUHIN</h1>
-                    <p className='d-flex flex-row justify-content-end text-end me-5 pe-2 fs-6 text-secondary'>Student at Internationation Islamic University Chittagong <br /> Completing B.Sc. in Computer Science & Engineering <br /> Email address : ijTuhin638@gmail.com<br /> Phone number: +880-1316797638 <br /> From Chattagram, Bangladesh.</p>
+                    <p className='d-flex flex-row justify-content-end text-end me-5 pe-2 fs-6 text-secondary'>LinkedIn: https://www.linkedin.com/in/israt-jahan-tuhin-2795bb1b7/<br />GitHub: https://github.com/ijTuhin <br /> Email address : ijTuhin638@gmail.com<br /> Phone number: +880-1316797638 <br /> From Chattagram, Bangladesh.</p>
                 </div>
                 <hr />
             </section>
@@ -20,22 +20,24 @@ const About = () => {
                 <div className='d-flex flex-row justify-content-start ms-5 align-items-end text-secondary'>
                     <FontAwesomeIcon icon={faBarChart}></FontAwesomeIcon>
                     <span className='hr-line border border-secondary '></span>
-                    <span className='d-inline px-2 text-start text-dark text-sm-wrap'>uyolwerfyweysoihliurwaeyrif;upwe9w9er8tpwe9tupseeuesutpaewtu;eit;werrtuaetuaeutLorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ex?</span>
+                    <span className='d-inline px-2 text-start text-dark text-sm-wrap'>
+                    I am a Student at Internationation Islamic University Chittagong, Completing B.Sc. in Computer Science & Engineering.
+                    </span>
                 </div><br />
                 <div className='d-flex flex-row justify-content-start ms-5 align-items-end text-secondary'>
                     <FontAwesomeIcon icon={faBarChart}></FontAwesomeIcon>
                     <span className='hr-line border border-secondary '></span>
-                    <span className='d-inline px-2 text-start text-dark text-sm-wrap'>uyolwerfyweysoihliurwaeyrif;upwe9w9er8tpwe9tupseeuesutpaewtu;eit;werrtuaetuaeutLorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ex?</span>
+                    <span className='d-inline px-2 text-start text-dark text-sm-wrap'>Learning Developing skills to be a Frontend Developer. Currently I am confident about my skills in HTML, CSS, Tailwind, Bootstrap, JS</span>
                 </div><br />
                 <div className='d-flex flex-row justify-content-start ms-5 align-items-end text-secondary'>
                     <FontAwesomeIcon icon={faBarChart}></FontAwesomeIcon>
                     <span className='hr-line border border-secondary '></span>
-                    <span className='d-inline px-2 text-start text-dark text-sm-wrap'>uyolwerfyweysoihliurwaeyrif;upwe9w9er8tpwe9tupseeuesutpaewtu;eit;werrtuaetuaeutLorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ex?</span>
+                    <span className='d-inline px-2 text-start text-dark text-sm-wrap'>I am learning React.js as well. In Sha Allah, soon I'll be able to work as Jr. Frontend Developer.</span>
                 </div><br />
                 <div className='d-flex flex-row justify-content-start ms-5 align-items-end text-secondary'>
                     <FontAwesomeIcon icon={faBarChart}></FontAwesomeIcon>
                     <span className='hr-line border border-secondary '></span>
-                    <span className='d-inline px-2 text-start text-dark text-sm-wrap'>uyolwerfyweysoihliurwaeyrif;upwe9w9er8tpwe9tupseeuesutpaewtu;eit;werrtuaetuaeutLorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ex?</span>
+                    <span className='d-inline px-2 text-start text-dark text-sm-wrap'>Actively looking forward to work as a trainee or intern to develop my skills & get some experience.</span>
                 </div>
                 <br /><br /><br />
                 <hr /> <br /><br />
