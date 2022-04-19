@@ -1,58 +1,65 @@
 [
     {
         "id": "623e2f58ae59fdb8bb6c20e9",
-        "price": "$2,345.80",
+        "price": "$5",
         "img": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80",
         "name": "Burger",
-        "services":"ueryauwery"
+        "services": "This scrumptious burger sits under a chilli lamb pattie, roasted bell pepper dip, onions, tomatoes and lettuce"
     },
     {
         "id": "623e2de14de50aae37c58aa1",
-        "price": "$1,870.29",
+        "price": "$5",
         "img": "https://images.unsplash.com/photo-1633641471128-5f32086b98c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
         "name": "Sandwiches",
-        "services":"ueryauwery"
+        "services": "The fillings for your sandwiches are baked into the bread here, making this an easy picnic option. To make it veggie, look for a vegetarian pesto"
     },
     {
         "id": "623e2f1b46d70c08b55c2925",
-        "price": "$3,904.05",
+        "price": "$15",
         "img": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
         "name": "Biriyani",
-        "services":"ueryauwery"
+        "services": "Aromatic and bursting with flavours, Biryani is a wholesome meal you should not miss out."
     },
     {
         "id": "623e2de1b03d1a01520f7272",
-        "price": "$3,934.57",
-        "img": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "price": "$10",
+        "img": "https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2020/10/North-Indian-Food-Top-10-Must-Eat-Local-Dishes.jpg?w=1024&ssl=1",
         "name": "North Indian Cuisine",
-        "services":"ueryauwery"
+        "services": "t includes popular North Indian Dishes like Kadai Paneer, Rajma, Dal Makhani, Dal Tadka, Dal Fry"
     },
     {
         "id": "623e2de1c8f08ebeb60c4829",
-        "price": "$3,746.00",
-        "img": "https://images.unsplash.com/photo-1613292443284-8d10ef9383fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "price": "$5",
+        "img": "https://img.freepik.com/free-photo/pav-bhaji-is-fast-food-dish-from-india-consisting-thick-vegetable-curry-served-with-soft-bread-roll_466689-74257.jpg?t=st=1650292904~exp=1650293504~hmac=431aaaf821c3b42a02b87ba2967655f7878f2bb411caf3ef225a3b3487f0ea0b&w=740",
         "name": "Street Food",
-        "services":"ueryauwery"
+        "services": "We have mouth-watering Paani Puri, Aloo Tikki, Cholle Bhaturey,Bhelpuri,Bikaneri Kachori, Dahi Bhallas, Jhal muri, Chaat Papdi"
     },
     {
         "id": "623e2de1bdedb422ada558d3",
-        "price": "$1,807.29",
+        "price": "$15",
         "img": "https://images.unsplash.com/photo-1618213837799-25d5552820d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=842&q=80",
         "name": "Pizza",
-        "services":"ueryauwery"
+        "services": " Each pizza requires different equipment and ingredients depending on the style of pizza you will make."
+    },
+    {
+        "id": "623e2de1bdlfHx8fGVu558d3",
+        "price": "$8",
+        "img": "https://img.freepik.com/free-photo/top-view-asian-dumplings-with-chopsticks-copy-space_23-2148694354.jpg?t=st=1650289602~exp=1650290202~hmac=7a89f1ae49a27b426eb0636d389f7705494adfee788159a8d281aa95afdc7d98&w=740",
+        "name": "Momos",
+        "services": "These South Asian dumplings are packed with flavor, thanks to a filling of chicken, fresh ginger, garlic and spicy white pepper"
     },
     {
         "id": "623e2f1b197aadaf801e7ac6",
-        "price": "$3,807.57",
-        "img": "https://images.unsplash.com/photo-1542826438-bd32f43d626f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=992&q=80",
+        "price": "$20",
+        "img": "https://img.freepik.com/free-photo/assortment-pieces-cake_114579-30728.jpg?w=740",
         "name": "Dessert",
-        "services":"ueryauwery"
+        "services": "We have cakes, cookies, custards, gelatins, ice creams, pastries, pies, puddings, macaroons, sweet soups, tarts, and fruit salad"
     },
     {
         "id": "623e2de1e76584b20a0a7798",
-        "price": "$2,403.88",
+        "price": "$10",
         "img": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
         "name": "Regular Thali",
-        "services":"ueryauwery"
+        "services": "1 Veg Sabji, DalFry, Plain Rice, 5 Fulka, Pickle, Onion Salad."
     }
 ]

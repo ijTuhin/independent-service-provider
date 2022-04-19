@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Services.css';
-const Services = ({ service, handleServiceBookings }) => {
+const ServiceII = ({ service }) => {
     const { name, services, price, img } = service;
     const navigate = useNavigate();
     console.log(img)
@@ -11,13 +11,13 @@ const Services = ({ service, handleServiceBookings }) => {
             <div className="card-body">
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text">{services}</p>
-                <p className="card-text">{price}</p>
+                <p className="card-text">Price: {price}</p>
             </div>
             <div className='card-footer'>
-            <button onClick={()=>navigate('/checkout')} className='btn py-2 service-btn'>Book Service</button>
+                <button onClick={()=>navigate('/checkout')} className='btn py-2 service-btn'>Book Service</button>
             </div>
         </div>
     );
 };
 
-export default Services;
+export default ServiceII;
