@@ -1,5 +1,5 @@
 import React from 'react';
-import './Blogs.css';
+import '../Blogs/Blogs.css';
 const CheckOut = () => {
     return (
         <div className='blog-container'>
