@@ -173,15 +173,18 @@ const Login = () => {
                             <></>
                             :
                             <>
-                            <div class="toast show position-absolute top-0 end-0 forgot-btn" role="alert" aria-live="assertive" aria-atomic="true">
-                                <div class="toast-body">
-                                    Forgot Password?
-                                    <div class="mt-2 pt-2 border-top d-flex justify-content-around">
-                                        <button onClick={handleResetPassword} type="button" class="btn btn-primary btn-sm">Reset</button>
-                                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+                                <div class="toast show position-absolute top-0 end-0 " role="alert" aria-live="assertive" aria-atomic="true">
+                                    <div class="toast-body">
+
+                                        <div className='d-flex justify-content-between'>
+                                            Forgot Password?
+                                            <button type="button" class="btn-close" aria-label="Close"></button>
+                                        </div>
+                                        <div class="mt-2 border-top d-flex justify-content-start">
+                                            <button onClick={handleResetPassword} type="button" class="btn btn-primary btn-sm">Reset</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             </>
                         }
 

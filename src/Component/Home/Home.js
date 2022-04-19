@@ -1,4 +1,4 @@
-import { faArrowRight, faBicycle, faBowlFood, faCab, faPeopleGroup, faShoppingBag, faShoppingBasket, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faBicycle, faBowlFood, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import banner1 from '../../images/banner1.jpg';
@@ -16,7 +16,6 @@ const Home = () => {
     }, []);
     return (
         <div className='home-container'>
-
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
