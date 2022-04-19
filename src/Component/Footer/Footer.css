@@ -5,13 +5,6 @@
     background-position: center;
 }
 
-.footer .box-container {
-    padding: 50px 180px 5px 220px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.5rem;
-}
-
 .footer .box-container .box h3 {
     color: #fff;
     font-size: 2rem;
@@ -37,7 +30,7 @@
 }
 
 .footer .box-container .box a:hover i {
-    padding-right: 1.5rem;
+    padding-right: 1rem;
 }
 
 .footer p{
