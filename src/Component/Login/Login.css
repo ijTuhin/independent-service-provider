@@ -38,11 +38,23 @@
 }
 
 .submit-field .forgot-btn{
+    text-align: center;
+    width: 10rem;
+    height: 5.5rem;
     border: none;
     background-color: rgba(230, 230, 250,0.5);
-    font-size: smaller;
+    font-size: small;
     color: rgb(31, 31, 31);
 }
-.submit-field .forgot-btn:hover{
-    color: rgb(151, 33, 202);;
+.submit-field .forgot-btn button{
+    padding: 5px 8px;
+    text-align: center;
+    border: none;
+    background-color: rgba(29, 75, 25, 0.5);
+    font-size: small;
+    color: rgb(31, 31, 31);
+}
+.submit-field .forgot-btn button:hover{
+    color: white;
+    background-color: rgba(29, 75, 25, 0.8);
 }

@@ -143,14 +143,14 @@ const Login = () => {
                             <></>
                     }
                     <div className='input-field'>
-                        <input onBlur={handleUserEmailBlur} type="email" name="email" placeholder='Enter email' />
+                        <input onBlur={handleUserEmailBlur} type="email" name="email" placeholder='Enter email' required />
                     </div>
                     {
                         notRegistered ?
                             <>
                                 <div>
-                                    <input onBlur={handleUserPasswordBlur} type="password" name="password" placeholder="Enter password" />
-                                    <input type="password" name="confirm-password" placeholder="Confirm password" />
+                                    <input onBlur={handleUserPasswordBlur} type="password" name="password" placeholder="Enter password" required />
+                                    <input type="password" name="confirm-password" placeholder="Confirm password" required />
                                 </div>
                                 <div>
                                     <input type="tel" name="phone-number" placeholder='Phone Number' />
@@ -160,22 +160,36 @@ const Login = () => {
                             :
                             <>
                                 <div className='input-field'>
-                                    <input onBlur={handleUserPasswordBlur} type="password" name="password" placeholder="Enter password" />
+                                    <input onBlur={handleUserPasswordBlur} type="password" name="password" placeholder="Enter password" required />
                                 </div>
                             </>
                     }
                     <div className='submit-field'>
 
+
+
+                        {notRegistered
+                            ?
+                            <></>
+                            :
+                            <>
+                            <div class="toast show position-absolute top-0 end-0 forgot-btn" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="toast-body">
+                                    Forgot Password?
+                                    <div class="mt-2 pt-2 border-top d-flex justify-content-around">
+                                        <button onClick={handleResetPassword} type="button" class="btn btn-primary btn-sm">Reset</button>
+                                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                            </>
+                        }
+
+
                         <div className='d-flex justify-content-between align-items-center'>
                             <div>
                                 <input onChange={handleUserNotRegisterdStateChange} type="checkbox" name="" /> <span id='form-q'>Don't have an account?</span>
                             </div>
-                            {notRegistered
-                                ?
-                                <></>
-                                :
-                                <><button onClick={handleResetPassword} className='forgot-btn'>Forgot password?</button></>
-                            }
                         </div>
                         <span className='text-danger d-block'>{error}</span>
                         <div className='d-flex justify-content-between align-items-center'>
